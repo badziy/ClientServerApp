@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Client {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         String host = "netology.homework";
         int port = 8080;
 
@@ -27,6 +27,8 @@ public class Client {
             }
             serverWord = in.readLine();
             System.out.println(serverWord);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
